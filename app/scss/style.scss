@@ -1,0 +1,497 @@
+@import "vars";
+@import "fonts";
+@import "global";
+.phone__call{
+   display: inline-block;
+   position: fixed;
+   z-index: 15;
+   top: 313px;
+   right: 69px;
+   width: 60px;
+   height: 60px;
+   padding: 10px;
+   background-color: #cd5700;
+   border-radius: 50%;
+   &-img{
+      position: absolute;
+      top: 14px;
+      right: 15px;
+   }
+}
+.header{
+   position: fixed;
+   left: 0;
+   top: 0px;
+   right: 0;
+   z-index: 10;
+   background-color: #800000;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 30px;
+      text-transform: uppercase;
+   }
+   &__btn{
+      color: #fff;
+      background-color: transparent;
+      padding: 6px 28px;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      margin-right: 8px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .3s;
+      outline: none;
+      &:hover{
+         color: #800000;
+         background-color: #fff;
+      }
+   }
+   &__phone{
+      font-size: 16px;
+      line-height: 18px;
+      color: #fff;
+      @extend %ubuntu-bold;
+   }
+}
+.menu{
+   font-size: 15px;
+   line-height: 17px;
+   color: #fff;
+   @extend %ubuntu-medium;
+   &__list-item{
+      display: inline-block;
+      & + .menu__list-item{
+         padding-left: 20px;
+      }
+   }
+   &__list-phone{
+      display: none;
+   }
+   &__btn{
+      display: none;
+   }
+}
+.top{
+   background-color: #fff;
+   margin-bottom: 40px;
+   &__wrapper{
+      display: flex;
+      align-items: flex-end;
+   }
+   &__inner{
+      display:flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      position: relative;
+   }
+   &__title{
+      font-size: 40px;
+      line-height: 70px;
+      color: #000;
+      text-shadow: 2px 3px 1px #d3d3d3;
+      margin-top: 130px;
+      @extend %sf-semibold;
+   }
+   &__sale{
+      font-size: 22px;
+      text-shadow: 2px 3px 1px #d3d3d3;
+   }
+   &__text{
+      margin: 25px 0 35px;
+      max-width: 366px;
+   }
+   &__social-item{
+      margin: 0 25px;
+      display: inline-block;
+   }
+   &__social-link{
+      opacity: 0.5;
+      transition: all .3s;
+      width: 50px;
+      height: 50px;
+      &:hover{
+         opacity: 1;
+      }
+   }
+}
+.countdown{
+   display: flex;
+}
+.time-section{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #000;
+   color: #fff;
+   padding: 15px 30px;
+   border-right: 1px solid #fff;
+   user-select: none;
+}
+.count{
+   font-size: 40px;
+}
+.units{
+   font-size: 13px;
+}
+.products{
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 50px 95px;
+   }
+   &__slider-item{
+      outline: none;
+   }
+   &__text{
+      max-width: 440px;
+      position: relative;
+      padding: 65px 15px 15px 15px;
+      &::before{
+         content: "";
+         position: absolute;
+         width: 560px;
+         height: 461px;
+         border: 4px solid #800000;
+         top: 0;
+         right: -58px;
+         transform: skewX(6deg);
+      }
+   }
+      p{
+         margin-bottom: 30px;
+      }
+   &__slider-text{
+      width: 285px;
+      position: absolute;
+      text-align: right;
+      font-size: 24px;
+      line-height: 28px;
+      @extend %ubuntu-medium;
+      bottom: 30px;
+      left: -150px;
+      z-index: 5;
+      }
+      &__slider{
+         max-width: 450px;
+         margin-bottom: 30px;
+         border: 4px solid #800000;
+      }
+}
+.slider-btn{
+   padding: 8px 15px;
+   border: 3px solid #800000;
+   border-radius: 50%;
+   position: absolute;
+   right: 0px;
+   cursor: pointer;
+   bottom: -30px;
+   outline: none;
+   z-index: 1;
+   svg{
+      stroke: #000;
+   }
+   &__left{
+      right: 60px;
+   }
+}
+.benefits{
+   &__items{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__item{
+         margin-bottom: 100px;
+         display: flex;
+         align-items: center;
+         position: relative;
+         padding-left: 25px;
+         &:nth-child(even){
+            margin-left: 40px;
+            transform: translateY(25px);
+         }
+         &:nth-child(3){
+            margin-left: 30px;
+         }
+         &:nth-child(4){
+            margin-left: 60px;
+         }
+}
+   &__num{
+         line-height: 41px;
+         font-size: 36px;
+         @extend %ubuntu-bold;
+         margin-right: 10px;
+         padding: 5px 15px;
+         background-color: #800000;
+         border-radius: 50%;
+      }
+   &__img{
+      margin-right: 32px;
+   }
+   &__info{
+      width: 300px;
+   }
+   &__info-title{
+      width: 123px;
+      font-size: 21px;
+      line-height: 24px;
+      @extend %ubuntu-bold;
+      margin-bottom: 10px;
+   }
+   &__info-text{
+      font-size: 15px;
+      line-height: 18px;
+   }
+}
+.specification{
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 25px;
+   }
+   &__item--center{
+      margin-left: -15px;
+      margin-right: -15px;
+   }
+   &__box{
+      margin-top: 10px;
+      width: 280px;
+      position: relative;
+      &::before{
+         content: "";
+         position: absolute;
+         background-repeat: no-repeat;
+         background-position: 0 0;
+         background-size: contain;
+      }
+   }
+   &__box-2{
+      margin-top: 140px;
+   }
+   &__box-4{
+      margin-top: 160px;
+   }
+   &__box-1::before{
+      background-image: url('../images/bulet_1.svg');
+      width: 165px;
+      height: 114px;
+      right: -117px;
+      top: 0px;
+   }
+   &__box-2::before{
+      background-image: url('../images/bulet_2.svg');
+      width: 346px;
+      height: 81px;
+      right: -300px;
+      top: -65px;
+   }
+   &__box-3::before{
+      background-image: url('../images/bulet_3.svg');
+      width: 220px;
+      height: 103px;
+      left: -243px;
+      top: -22px;
+      transform: rotate(45deg);
+   }
+   &__box-4::before{
+      background-image: url('../images/bulet_4.svg');
+      width: 124px;
+      height: 89px;
+      left: -172px;
+      top: -76px;
+   }  
+   &__box-title{
+      font-size: 21px;
+      line-height: 28px;
+      @extend %ubuntu-bold;
+      margin-bottom: 10px;
+   }
+   &__box-text{
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 18px;
+   }
+}
+.questions{
+   .title{
+      margin-bottom: 10px;
+   }
+}
+.marquee{
+   width:100%;
+   overflow:hidden;
+   &__img{
+      padding-left:100%;
+      animation: marquee 10s infinite linear;
+   }
+   }
+.faq{
+   max-width: 600px;
+   margin: 20px auto;
+   &__item{
+      margin-bottom: 5px;
+      border: 3px solid #b91125;
+      border-radius: 3px;
+   }
+   &-title{
+      display: block;
+      padding: 10px 15px;
+      color: #800000;
+      font-size: 17px;
+      cursor: pointer;
+      transition: all .2s ease-out;
+      position: relative;
+      &::after{
+         content: "";
+         display: block;
+         position: absolute;
+         top: 50%;
+         right: 15px;
+         transform: translateY(-50%);
+         border-style: solid;
+         border-width: 8px 5px 0 5px;
+         border-color: #007bff transparent transparent transparent;
+      }
+      &:hover{
+         color: #fff;
+         background-color: rgba(#b91125, .9);
+      }
+   }
+   &__input{
+      appearance: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      &:checked ~ .faq-title::after{
+         border-width: 0px 5px 8px 5px;
+         border-color: transparent transparent #007bff transparent;
+      }
+      &:checked ~ .faq-title{
+         background-color: #b91125;
+         color: #fff;
+      }
+      &:checked ~ .faq-text{
+         display: block;
+      }
+   }
+   &-text{
+      display: none;
+      padding: 10px 15px;
+      font-size: 14px;
+   }
+}
+.contacts{
+   &__inner{
+      display: flex;
+      padding-left: 25px;
+   }
+   &__info{
+      width: 240px;
+      margin-right: 60px;
+   }
+   &__info-box{
+      margin-bottom: 30px;
+   }
+   &__info-title{
+      line-height: 24px;
+      font-size: 21px;
+      @extend %ubuntu-bold;
+      margin: 0 0 13px;
+   }
+   &__ino-phone,
+   &__info-email{
+      font-size: 15px;
+      line-height: 18px;
+   }
+   &__info-email:hover{
+      text-decoration: underline;
+   }
+   &__form{
+      width: 570px;
+      margin-right: 106px;
+   }
+   &__form-title{
+      line-height: 24px;
+      font-size: 21px;
+      @extend %ubuntu-bold;
+      margin:0 0 13px;
+   }
+   &__form-text{
+      font-size: 15px;
+      line-height: 18px;
+      margin: 0 0 12px;
+   }
+   &__form-line{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__form-input,
+   &__form-textarea{
+      background:rgba(0,0,0,0.8);
+      @extend %ubuntu-regular;
+      border: none;
+      padding: 15px;
+      font-size: 13px;
+      line-height: 15px;
+      outline: none;
+      color: #fff;
+      &::placeholder{
+         color: rgba(#fff,.4);
+      }
+   }
+   &__form-input{
+      width: 48.5%;
+   }
+   &__form-textarea{
+      min-height:  144px;
+      width: 100%;
+      resize: none;
+      margin: 20px 0;
+   }
+   &__form-btn{
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      @extend %ubuntu-bold;
+      border: 1px solid #800000;
+      border-radius: 2px;
+      padding: 9px 15px;
+      color: #fff;
+      background-color: #800000;
+      cursor: pointer;
+      transform: all .3s;
+      &:hover{
+         background-color: rgba(#800000, .7);
+      }
+   }
+   &__social-list{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+   &__social-item{
+      margin: 14px 0;
+   }
+   &__social-link{
+      opacity: .5;
+      &:hover{
+         opacity: 1;
+      }
+   }
+}
+.footer{
+   &__copy{
+      text-align: right;
+      font-size: 13px;
+      line-height: 15px;
+      color: rgba(#000,.64)
+      }
+   }
+
+   @import "media";
